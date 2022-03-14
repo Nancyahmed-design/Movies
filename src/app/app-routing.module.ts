@@ -1,3 +1,4 @@
+import { AuthGuard } from './auth.guard';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
@@ -10,12 +11,12 @@ import { RegisterComponent } from './register/register.component';
 import { TvComponent } from './tv/tv.component';
 
 const routes: Routes = [
-  {path:'home',component:HomeComponent},
-  {path:'about',component:AboutComponent},
-  {path:'gallery',component:GalleryComponent},
-  {path:'movies',component:MoviesComponent},
-  {path:'tv',component:TvComponent},
-  {path:'contacts',component:ContactsComponent},
+  {path:'home',canActivate:[AuthGuard],component:HomeComponent},
+  {path:'about',canActivate:[AuthGuard],component:AboutComponent},
+  {path:'gallery',canActivate:[AuthGuard],component:GalleryComponent},
+  {path:'movies',canActivate:[AuthGuard],component:MoviesComponent},
+  {path:'tv',canActivate:[AuthGuard],component:TvComponent},
+  {path:'contacts',canActivate:[AuthGuard],component:ContactsComponent},
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent}
 

@@ -14,6 +14,7 @@ export class AuthService {
     if(localStorage.getItem('userToken') != null)
     {
       this.setUserData();
+      
     }
   }
   userData = new BehaviorSubject(null);
