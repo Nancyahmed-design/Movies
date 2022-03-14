@@ -1,0 +1,31 @@
+<nav class="d-flex  justify-content-between p-2 align-items-center">
+  <div class="d-flex">
+    <h3><a href="#" class="mb-0">Noxe</a></h3>
+    <ul class="ms-4 list-unstyled  mb-0 d-flex justify-content-around align-items-center">
+      <li><a *ngIf="isLogin" class="mx-2">Home</a></li>
+      <li><a *ngIf="isLogin" routerLink="/about" class="mx-2">About</a></li>
+      <li><a *ngIf="isLogin" routerLink="/gallery" class="mx-2">Gallery</a></li>
+      <li><a *ngIf="isLogin" routerLink="/movies" class="mx-2">Movies</a></li>
+      <li><a *ngIf="isLogin" routerLink="/tv" class="mx-2">Tv</a></li>
+      <li><a *ngIf="isLogin" routerLink="/contacts" class="mx-2">Contacts</a></li>
+    </ul>
+  </div>
+
+
+  <div class="d-flex">
+    <div class="socialMedia">
+      <i class="fab mx-2 fa-facebook"></i>
+      <i class="fab mx-2 fa-instagram"></i>
+      <i class="fab mx-2 fa-youtube"></i>
+      <i class="fab mx-2 fa-spotify"></i>
+      <i class="fab mx-2 fa-xbox"></i>
+
+    </div>
+    <ul class="list-unstyled  mb-0 d-flex justify-content-around ">
+      <li class="mx-2"><a *ngIf="!isLogin" routerLink="/login">Login</a></li>
+      <li class="mx-2"><a *ngIf="!isLogin" routerLink="/register">Register</a></li>
+      <li class="mx-2"><a (click)="callLogout()" *ngIf="isLogin" routerLink="/">LogOut</a></li>
+      </ul>
+  </div>
+
+</nav>
