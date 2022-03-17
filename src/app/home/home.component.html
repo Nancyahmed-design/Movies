@@ -1,1 +1,66 @@
-<p>home works!</p>
+ <div class="container">
+   <div class="row py-4">
+     <div class="col-md-4">
+       <div class="brdr w-25 my-3"></div>
+       <h2 class="my-3">Trending<br/> Movies <br/> To watch Right Now</h2>
+       <p class="text-muted">Trending Movies To watch Right Now</p>
+       <div class="brdr w-100 my-3"></div>
+
+     </div>
+     <div *ngFor="let movie of trendingMovies" class="col-md-2">
+       <div class="movie position-relative">
+         <img [src]="imgPrefix+movie.poster_path" class="w-100" alt="">
+         <h3 class="h5 fw-bolder">{{movie.title}}</h3>
+         <div class="vote bg-lights p-2 fw-bolder position-absolute top-0 end-0">
+            {{movie.vote_average}}
+         </div>
+       </div>
+
+     </div>
+   </div>
+
+
+    <div class="row py-4">
+     <div class="col-md-4">
+       <div class="brdr w-25 my-3"></div>
+       <h2 class="my-3">Trending<br/> Tv <br/> To watch Right Now</h2>
+       <p class="text-muted">Trending Tv To watch Right Now</p>
+       <div class="brdr w-100 my-3"></div>
+
+     </div>
+     <div *ngFor="let tv of trendingTv" class="col-md-2">
+       <div class="movie position-relative">
+         <img [src]="imgPrefix+tv.poster_path" class="w-100" alt="">
+         <h3 class="h5 fw-bolder">{{tv.name}}</h3>
+         <div class="vote bg-lights p-2 fw-bolder position-absolute top-0 end-0">
+            {{tv.vote_average}}
+         </div>
+       </div>
+
+     </div>
+   </div>
+
+   <div class="row py-4">
+    <div class="col-md-4">
+      <div class="brdr w-25 my-3"></div>
+      <h2 class="my-3">Trending<br/> persons <br/> To watch Right Now</h2>
+      <p class="text-muted">Trending persons To watch Right Now</p>
+      <div class="brdr w-100 my-3"></div>
+
+    </div>
+    <div *ngFor="let person of trendingpeople" class="col-md-2">
+      <div class="movie position-relative">
+        <img [src]="imgPrefix+person.profile_path" class="w-100" alt="">
+        <h3 class="h5 fw-bolder">{{person.name}}</h3>
+        <!-- <div class="vote bg-lights p-2 fw-bolder position-absolute top-0 end-0">
+           {{person.vote_average}}
+        </div> -->
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+
+

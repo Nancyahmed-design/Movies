@@ -2,7 +2,7 @@
   <div class="d-flex">
     <h3><a href="#" class="mb-0">Noxe</a></h3>
     <ul class="ms-4 list-unstyled  mb-0 d-flex justify-content-around align-items-center">
-      <li><a *ngIf="isLogin" class="mx-2">Home</a></li>
+      <li><a *ngIf="isLogin" routerLink="/home" class="mx-2">Home</a></li>
       <li><a *ngIf="isLogin" routerLink="/about" class="mx-2">About</a></li>
       <li><a *ngIf="isLogin" routerLink="/gallery" class="mx-2">Gallery</a></li>
       <li><a *ngIf="isLogin" routerLink="/movies" class="mx-2">Movies</a></li>
