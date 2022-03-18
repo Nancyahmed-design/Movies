@@ -1,3 +1,4 @@
+import { MoviedetailsComponent } from './moviedetails/moviedetails.component';
 import { AuthGuard } from './auth.guard';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -17,6 +18,8 @@ const routes: Routes = [
   {path:'movies',canActivate:[AuthGuard],component:MoviesComponent},
   {path:'tv',canActivate:[AuthGuard],component:TvComponent},
   {path:'contacts',canActivate:[AuthGuard],component:ContactsComponent},
+  {path:'moviedetails/:id',canActivate:[AuthGuard],component:MoviedetailsComponent},
+
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent}
 

@@ -1,1 +1,15 @@
-<p>moviedetails works!</p>
+<div class="row">
+  <div class="col-md-3">
+    <img class="w-100" [src]="imgPrefix+movieDetails.poster_path" alt="">
+
+  </div>
+  <div class="col-md-9">
+    <h2 class="fw-bolder">{{movieDetails.title}}</h2>
+    <p class="text-muted p-2">{{movieDetails.overview}}</p>
+    <h4>geners:</h4>
+    <ul>
+      <li *ngFor="let g of movieDetails.genres">{{g.name}}</li>
+    </ul>
+
+  </div>
+</div>

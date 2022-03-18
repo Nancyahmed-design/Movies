@@ -9,11 +9,14 @@
      </div>
      <div *ngFor="let movie of trendingMovies" class="col-md-2">
        <div class="movie position-relative">
-         <img [src]="imgPrefix+movie.poster_path" class="w-100" alt="">
-         <h3 class="h5 fw-bolder">{{movie.title}}</h3>
-         <div class="vote bg-lights p-2 fw-bolder position-absolute top-0 end-0">
-            {{movie.vote_average}}
-         </div>
+         <a [routerLink]="['/moviedetails',movie.id]">
+          <img [src]="imgPrefix+movie.poster_path" class="w-100" alt="">
+          <h3 class="h5 fw-bolder">{{movie.title}}</h3>
+          <div class="vote bg-lights p-2 fw-bolder position-absolute top-0 end-0">
+             {{movie.vote_average}}
+          </div>
+         </a>
+
        </div>
 
      </div>
