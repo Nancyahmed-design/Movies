@@ -1,3 +1,4 @@
+import { NotfoundComponent } from './notfound/notfound.component';
 import { MoviedetailsComponent } from './moviedetails/moviedetails.component';
 import { AuthGuard } from './auth.guard';
 import { NgModule, Component } from '@angular/core';
@@ -23,7 +24,9 @@ const routes: Routes = [
   {path:'moviedetails/:id',canActivate:[AuthGuard],component:MoviedetailsComponent},
 
   {path:'register',component:RegisterComponent},
-  {path:'login',component:LoginComponent}
+  {path:'login',component:LoginComponent},
+  {path:'settings',loadChildren:()=> import('./settings/settings.module').then(x=>x.SettingsModule)},
+  {path:'**',component:NotfoundComponent}
 
 
 ];

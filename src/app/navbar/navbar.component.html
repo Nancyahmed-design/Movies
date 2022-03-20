@@ -24,6 +24,16 @@
     <ul class="list-unstyled  mb-0 d-flex justify-content-around ">
       <li class="mx-2"><a *ngIf="!isLogin" routerLink="/login">Login</a></li>
       <li class="mx-2"><a *ngIf="!isLogin" routerLink="/register">Register</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link p-0 dropdown-toggle" routerLink="settings" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Settings
+        </a>
+        <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" routerLink="settings/password">password</a></li>
+          <li><a class="dropdown-item" routerLink="settings/log">log</a></li>
+
+        </ul>
+      </li>
       <li class="mx-2"><a (click)="callLogout()" *ngIf="isLogin" routerLink="/">LogOut</a></li>
       </ul>
   </div>
