@@ -12,6 +12,8 @@ import { RegisterComponent } from './register/register.component';
 import { TvComponent } from './tv/tv.component';
 
 const routes: Routes = [
+  {path:'',redirectTo:'home',pathMatch:'full'},
+
   {path:'home',canActivate:[AuthGuard],component:HomeComponent},
   {path:'about',canActivate:[AuthGuard],component:AboutComponent},
   {path:'gallery',canActivate:[AuthGuard],component:GalleryComponent},
